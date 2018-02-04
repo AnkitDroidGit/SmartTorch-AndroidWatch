@@ -7,7 +7,7 @@ This is simple and smart torch for smart android watches.
 
 ## [Download App from Play Store](https://play.google.com/store/apps/details?id=com.freeankit.smartrorch)
 
-Download the apk and type your name in the textfield before start updating the background location
+Download the app and use it in your daily life
 
 
 
