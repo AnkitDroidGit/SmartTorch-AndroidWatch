@@ -3,7 +3,7 @@
 This is simple and smart torch for smart android watches.
 
 
-![ScreenShot](https://i0.wp.com/appsgit.com/wp-content/uploads/2017/10/background_location_with_retrofit.jpg?zoom=2&resize=293%2C500&ssl=1)
+![ScreenShot](https://github.com/AnkitDroidGit/WearableSmartTorch/blob/master/app/art/device-2018-01-31-121224.png)
 
 ## [Download App from Play Store](https://play.google.com/store/apps/details?id=com.freeankit.smartrorch)
 
