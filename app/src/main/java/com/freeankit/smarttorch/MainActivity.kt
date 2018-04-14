@@ -1,9 +1,10 @@
-package com.freeankit.smartrorch
+package com.freeankit.smarttorch
 
 import android.content.Context
 import android.os.Bundle
 import android.support.wearable.activity.WearableActivity
 import android.util.Log
+import  android.provider.Settings.System
 
 
 class MainActivity : WearableActivity() {
@@ -15,28 +16,41 @@ class MainActivity : WearableActivity() {
         // Enables Always-on
         setAmbientEnabled()
 
-        screenBrightness(100, this)
+        screenBrightness(255, this)
 
 
     }
 
-    fun screenBrightness(level: Int, context: Context): Boolean {
+    override fun onRestart() {
+        super.onRestart()
+        // Enables Always-on
+        setAmbientEnabled()
+
+        screenBrightness(255, this)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Enables Always-on
+        setAmbientEnabled()
+
+        screenBrightness(255, this)
+    }
+
+    private fun screenBrightness(level: Int, context: Context): Boolean {
 
         try {
-            android.provider.Settings.System.putInt(
-                    context.contentResolver,
+            System.putInt(context.contentResolver,
                     android.provider.Settings.System.SCREEN_BRIGHTNESS, level)
 
-
-            android.provider.Settings.System.putInt(context.contentResolver,
+            System.putInt(context.contentResolver,
                     android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE,
                     android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL)
 
-            android.provider.Settings.System.putInt(
+            System.putInt(
                     context.contentResolver,
                     android.provider.Settings.System.SCREEN_BRIGHTNESS,
                     level)
-
 
             return true
         } catch (e: Exception) {
